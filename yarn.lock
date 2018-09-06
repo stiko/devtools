@@ -528,10 +528,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-md5@^0.1.10:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/angular-md5/-/angular-md5-0.1.10.tgz#7cb6c7d5c1d0401ffe9871a117849f03c2cc4863"
-
 ansi-colors@^3.0.0:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.0.5.tgz#cb9dc64993b64fd6945485f797fc3853137d9a7b"
@@ -3374,6 +3370,10 @@ jasminewd2@^2.1.0:
 js-base64@^2.1.8:
   version "2.4.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"
+
+js-sha512@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/js-sha512/-/js-sha512-0.8.0.tgz#dd22db8d02756faccf19f218e3ed61ec8249f7d4"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"

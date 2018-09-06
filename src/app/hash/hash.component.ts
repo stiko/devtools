@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Md5} from 'angular-md5';
+import * as sha512 from 'js-sha512';
 
 @Component({
     selector: 'app-hash',
@@ -7,11 +7,16 @@ import {Md5} from 'angular-md5';
     styleUrls: ['./hash.component.css']
 })
 export class HashComponent implements OnInit {
+    textToHash;
+    hashedText;
 
     constructor() {
     }
 
     ngOnInit() {
     }
-
+    hash() {
+        // @ts-ignore
+        this.hashedText = sha512(this.textToHash);
+    }
 }

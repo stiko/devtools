@@ -22,9 +22,9 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "angular-md5": "^0.1.10",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
+    "js-sha512": "^0.8.0",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

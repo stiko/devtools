@@ -1,3 +1,20 @@
-<p>
-  hash works!
-</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<mat-tab-group>
+    <mat-tab label="SHA512">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="Text to Hash" [(ngModel)]="textToHash">
+            </mat-form-field>
+            <button mat-button *ngIf="textToHash" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="textToHash=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="hash()">SHA512</button>
+            <div>
+                <p>Hashed Text:</p>
+                {{hashedText}}
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>
