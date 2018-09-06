@@ -11,7 +11,8 @@ export class AppComponent implements OnDestroy {
     mobileQuery: MediaQueryList;
     // fillerNav = Array.from({length: 3}, (_, i) => `Nav Itemmmmmmmm ${i + 1}`);
     fillerNav = [
-        {name: 'Base64 Enc/Dec', link: '/base64'}
+        {name: 'Encode/Decode', link: '/base64'},
+        {name: 'Hash', link: '/hash'}
     ];
 
     private _mobileQueryListener: () => void;

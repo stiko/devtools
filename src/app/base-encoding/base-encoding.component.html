@@ -33,5 +33,41 @@
             {{decodedText}}
         </div>
     </mat-tab>
+
+    <mat-tab label="URL Encode">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToEncode">
+            </mat-form-field>
+            <button mat-button *ngIf="urlToEncode" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="urlToEncode=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="encodeUrl()">Ecode</button>
+            <p>
+                Decoded Text:
+            </p>
+            {{encodedUrl}}
+        </div>
+    </mat-tab>
+
+    <mat-tab label="URL Decode">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToDecode">
+            </mat-form-field>
+            <button mat-button *ngIf="urlToDecode" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="urlToDecode=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="decodeUrl()">Decode</button>
+            <p>
+                Decoded Text:
+            </p>
+            {{decodedUrl}}
+        </div>
+    </mat-tab>
 </mat-tab-group>
 

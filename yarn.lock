@@ -528,6 +528,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-md5@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/angular-md5/-/angular-md5-0.1.10.tgz#7cb6c7d5c1d0401ffe9871a117849f03c2cc4863"
+
 ansi-colors@^3.0.0:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.0.5.tgz#cb9dc64993b64fd6945485f797fc3853137d9a7b"
