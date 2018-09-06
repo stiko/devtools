@@ -1,0 +1,37 @@
+<mat-tab-group>
+    <mat-tab label="Base64 Encode">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="Text to Encode" [(ngModel)]="textToEncode">
+            </mat-form-field>
+            <button mat-button *ngIf="textToEncode" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="textToEncode=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="encode()">Encode</button>
+            <div>
+                <p>Encoded Text:</p>
+                {{encodedText}}
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Base64 Decode">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="Text to Decode" [(ngModel)]="textToDecode">
+            </mat-form-field>
+            <button mat-button *ngIf="textToEncode" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="textToDecode=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="decode()">Decode</button>
+            <p>
+                Decoded Text:
+            </p>
+            {{decodedText}}
+        </div>
+    </mat-tab>
+</mat-tab-group>
+

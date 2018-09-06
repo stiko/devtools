@@ -6,12 +6,12 @@ import {MediaMatcher} from '../../node_modules/@angular/cdk/layout';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
+export class AppComponent implements OnDestroy {
     title = 'Dev Tools';
     mobileQuery: MediaQueryList;
     // fillerNav = Array.from({length: 3}, (_, i) => `Nav Itemmmmmmmm ${i + 1}`);
     fillerNav = [
-        'dsa', 'dsa'
+        {name: 'Base64 Enc/Dec', link: '/base64'}
     ];
 
     private _mobileQueryListener: () => void;
@@ -21,6 +21,7 @@ export class AppComponent implements OnDestroy{
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.mobileQuery.addListener(this._mobileQueryListener);
     }
+
     ngOnDestroy(): void {
         this.mobileQuery.removeListener(this._mobileQueryListener);
     }
