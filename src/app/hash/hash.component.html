@@ -1,9 +1,8 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 <mat-tab-group>
     <mat-tab label="SHA512">
         <div class="tab-content">
             <mat-form-field>
-                <input matInput placeholder="Text to Hash" [(ngModel)]="textToHash">
+                <input matInput placeholder="Text to Hash" [(ngModel)]="textToHash" autofocus>
             </mat-form-field>
             <button mat-button *ngIf="textToHash" matSuffix mat-icon-button aria-label="Clear"
                     (click)="textToHash=''">

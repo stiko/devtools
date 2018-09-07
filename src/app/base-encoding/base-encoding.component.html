@@ -2,7 +2,7 @@
     <mat-tab label="Base64 Encode">
         <div class="tab-content">
             <mat-form-field>
-                <input matInput placeholder="Text to Encode" [(ngModel)]="textToEncode">
+                <input matInput placeholder="Text to Encode" [(ngModel)]="textToEncode" autofocus>
             </mat-form-field>
             <button mat-button *ngIf="textToEncode" matSuffix mat-icon-button aria-label="Clear"
                     (click)="textToEncode=''">
@@ -19,7 +19,7 @@
     <mat-tab label="Base64 Decode">
         <div class="tab-content">
             <mat-form-field>
-                <input matInput placeholder="Text to Decode" [(ngModel)]="textToDecode">
+                <input matInput placeholder="Text to Decode" [(ngModel)]="textToDecode" autofocus>
             </mat-form-field>
             <button mat-button *ngIf="textToEncode" matSuffix mat-icon-button aria-label="Clear"
                     (click)="textToDecode=''">
@@ -37,7 +37,7 @@
     <mat-tab label="URL Encode">
         <div class="tab-content">
             <mat-form-field>
-                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToEncode">
+                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToEncode" autofocus>
             </mat-form-field>
             <button mat-button *ngIf="urlToEncode" matSuffix mat-icon-button aria-label="Clear"
                     (click)="urlToEncode=''">
@@ -55,7 +55,7 @@
     <mat-tab label="URL Decode">
         <div class="tab-content">
             <mat-form-field>
-                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToDecode">
+                <input matInput placeholder="Url to Encode" [(ngModel)]="urlToDecode" autofocus>
             </mat-form-field>
             <button mat-button *ngIf="urlToDecode" matSuffix mat-icon-button aria-label="Clear"
                     (click)="urlToDecode=''">

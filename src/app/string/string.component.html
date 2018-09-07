@@ -1,0 +1,109 @@
+<mat-tab-group>
+    <mat-tab label="String length">
+        <div class="tab-content">
+            <mat-form-field class="wide-field">
+                <textarea cdkTextareaAutosize
+                          #autosize="cdkTextareaAutosize"
+                          cdkAutosizeMinRows="3"
+                          cdkAutosizeMaxRows="15"
+                          matInput
+                          placeholder="Text"
+                          [(ngModel)]="textToLength"
+                          autofocus></textarea>
+            </mat-form-field>
+            <button mat-button *ngIf="textToLength" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="textToLength=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="getLength()">Get Length</button>
+            <div>
+                <p>String Length:</p>
+                {{stringLength}}
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Js Substring">
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="String" [(ngModel)]="textToSlice" autofocus>
+                    </mat-form-field>
+                    <button mat-button *ngIf="textToSlice" matSuffix mat-icon-button aria-label="Clear"
+                            (click)="textToSlice=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    .slice(
+                    <mat-form-field>
+                        <input matInput placeholder="Begin" [(ngModel)]="sliceBegin">
+                    </mat-form-field>
+                    ,
+                    <mat-form-field>
+                        <input matInput placeholder="End" [(ngModel)]="sliceEnd">
+                    </mat-form-field>
+                    )
+                </td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="getSliceString()">Run</button>
+                </td>
+                <td>
+                    Result: {{sliceResult}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="String" [(ngModel)]="textSubstring">
+                    </mat-form-field>
+                    <button mat-button *ngIf="textSubstring" matSuffix mat-icon-button aria-label="Clear"
+                            (click)="textSubstring=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    .substring(
+                    <mat-form-field>
+                        <input matInput placeholder="From" [(ngModel)]="substringFrom">
+                    </mat-form-field>
+                    ,
+                    <mat-form-field>
+                        <input matInput placeholder="To" [(ngModel)]="substringTo">
+                    </mat-form-field>
+                    )
+                </td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="getSubstring()">Run</button>
+                </td>
+                <td>
+                    Result: {{substringResult}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <input matInput placeholder="String" [(ngModel)]="textSubstr">
+                    </mat-form-field>
+                    <button mat-button *ngIf="textSubstr" matSuffix mat-icon-button aria-label="Clear"
+                            (click)="textSubstr=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    .substr(
+                    <mat-form-field>
+                        <input matInput placeholder="Start" [(ngModel)]="substrStart">
+                    </mat-form-field>
+                    ,
+                    <mat-form-field>
+                        <input matInput placeholder="Length" [(ngModel)]="substrLength">
+                    </mat-form-field>
+                    )
+                </td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="getSubstr()">Run</button>
+                </td>
+                <td>
+                    Result: {{substrResult}}
+                </td>
+            </tr>
+        </table>
+    </mat-tab>
+</mat-tab-group>
