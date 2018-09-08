@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildProd": "ng build --prod --base-href /devtools/",
+    "buildProd": "ng build --prod --base-href /devtools/ && yarn gh-publish" ,
     "gh-publish": "gh-pages -d dist/dev-tools/",
     "test": "ng test",
     "lint": "ng lint",
