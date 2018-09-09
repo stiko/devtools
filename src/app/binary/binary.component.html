@@ -11,8 +11,23 @@
             <br>
             <button mat-raised-button color="primary" (click)="convertIntTobin()">To bin</button>
             <div>
-                <p>Binary Results:</p>
-                {{binInt}}
+                <p>
+                    <button mat-button matSuffix *ngIf="binInt.length > 0" mat-icon-button aria-label="Clear"
+                            matTooltip="Clear"
+                            (click)="binInt=[]">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    Binary Results:
+                </p>
+                <table *ngIf="binInt.length > 0" class="result-table">
+
+                    <tr *ngFor="let r of binInt">
+                        <td>{{r.from}}:&emsp;</td>
+                        <td>
+                            {{r.to}}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </mat-tab>
@@ -29,20 +44,22 @@
             <br>
             <button mat-raised-button color="primary" (click)="convertStrToBin()">To bin</button>
             <div>
-                <p>Binary Results:</p>
-                <table *ngIf="strBin.length > 0">
-                    <button mat-button matSuffix mat-icon-button aria-label="Clear"
+                <p>
+                    <button mat-button matSuffix *ngIf="strBin.length > 0" mat-icon-button aria-label="Clear"
+                            matTooltip="Clear"
                             (click)="strBin=[]">
                         <mat-icon>close</mat-icon>
                     </button>
-                    <div *ngFor="let r of strBin">
-                        <tr>
-                            <td>{{r.from}}:&emsp;</td>
-                            <td>
+                    Binary Results:
+                </p>
+                <table *ngIf="strBin.length > 0" class="result-table">
+
+                    <tr *ngFor="let r of strBin">
+                        <td>{{r.from}}:&emsp;</td>
+                        <td>
                             {{r.to}}
                         </td>
-                        </tr>
-                    </div>
+                    </tr>
                 </table>
             </div>
         </div>

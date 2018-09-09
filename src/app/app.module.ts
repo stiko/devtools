@@ -13,7 +13,7 @@ import {
     MatInputModule,
     MatListModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import {BaseEncodingComponent} from './base-encoding/base-encoding.component';
 import {FormsModule} from '@angular/forms';
@@ -54,6 +54,7 @@ const appRoutes: Routes = [
         MatInputModule,
         MatTabsModule,
         FormsModule,
+        MatTooltipModule,
 
 
     ],

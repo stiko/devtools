@@ -4,3 +4,7 @@ mat-form-field {
 .tab-content {
     text-align: center;
 }
+
+.result-table {
+    text-align: right;
+}

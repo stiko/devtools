@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class BinaryComponent implements OnInit {
 
     intToBin;
-    binInt;
+    binInt = [];
 
     strToBin;
     strBin = [];
@@ -20,7 +20,8 @@ export class BinaryComponent implements OnInit {
     }
 
     convertIntTobin() {
-        this.binInt = (Number(this.intToBin) >>> 0).toString(2);
+        const binInt = (Number(this.intToBin) >>> 0).toString(2);
+        this.binInt[this.binInt.length] = {from: this.intToBin, to: binInt};
     }
 
     convertStrToBin() {
