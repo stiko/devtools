@@ -13,7 +13,8 @@ export class AppComponent implements OnDestroy {
     fillerNav = [
         {name: 'Encode/Decode', link: '/base64'},
         {name: 'Hash', link: '/hash'},
-        {name: 'String', link: '/string'}
+        {name: 'String', link: '/string'},
+        {name: 'Binary', link: '/binary'}
     ];
 
     private _mobileQueryListener: () => void;

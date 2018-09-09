@@ -19,12 +19,14 @@ import {BaseEncodingComponent} from './base-encoding/base-encoding.component';
 import {FormsModule} from '@angular/forms';
 import { HashComponent } from './hash/hash.component';
 import { StringComponent } from './string/string.component';
+import { BinaryComponent } from './binary/binary.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'base64', component: BaseEncodingComponent},
     {path: 'hash', component: HashComponent},
     {path: 'string', component: StringComponent},
+    {path: 'binary', component: BinaryComponent},
 ];
 
 @NgModule({
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
         BaseEncodingComponent,
         HashComponent,
         StringComponent,
+        BinaryComponent,
     ],
     imports: [
         RouterModule.forRoot(

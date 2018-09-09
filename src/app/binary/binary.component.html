@@ -1,0 +1,50 @@
+<mat-tab-group>
+    <mat-tab label="Int to bin">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput type="number" placeholder="Integer to bin" [(ngModel)]="intToBin" autofocus>
+            </mat-form-field>
+            <button mat-button *ngIf="intToBin" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="intToBin=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="convertIntTobin()">To bin</button>
+            <div>
+                <p>Binary Results:</p>
+                {{binInt}}
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="String to bin">
+        <div class="tab-content">
+            <mat-form-field>
+                <input matInput placeholder="String to bin" [(ngModel)]="strToBin" autofocus>
+            </mat-form-field>
+            <button mat-button *ngIf="strToBin" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="strToBin=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <br>
+            <button mat-raised-button color="primary" (click)="convertStrToBin()">To bin</button>
+            <div>
+                <p>Binary Results:</p>
+                <table *ngIf="strBin.length > 0">
+                    <button mat-button matSuffix mat-icon-button aria-label="Clear"
+                            (click)="strBin=[]">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <div *ngFor="let r of strBin">
+                        <tr>
+                            <td>{{r.from}}:&emsp;</td>
+                            <td>
+                            {{r.to}}
+                        </td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>
